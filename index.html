@@ -9,7 +9,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>TODO LIST</h1>
+        <div class="header">
+            <h1>TODO LIST</h1>
+            <div class="auth-buttons">
+                <span id="userEmail"></span>
+                <button id="logoutBtn" class="logout-btn" style="display: none;">로그아웃</button>
+                <button id="loginBtn" class="login-btn" onclick="location.href='login.html'">로그인</button>
+            </div>
+        </div>
         <div class="todo-input">
             <input type="text" id="taskInput" placeholder="이곳에 해야할 일을 적어주세요">
             <button id="addBtn">+</button>
@@ -19,6 +26,12 @@
         </ul>
         <button id="clearAll" class="clear-all">Clear All</button>
     </div>
-    <script src="script.js"></script>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js" type="module"></script>
+    
+    <script src="script.js" type="module"></script>
 </body>
 </html> 
